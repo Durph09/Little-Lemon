@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
+
+
+
+
+
+
+
+
+.menuTitle {
+width: 296px;
+height: 21px;
+font-family: 'Karla';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. */
+.menuitem {
+width: 297px;
+height: 43px;
+
+font-family: 'Karla';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #495E57;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.menuPrice{
+font-family: 'Karla';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #495E57;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.logo {
+  float: left;
+  width: 10%;
+  
+}
+
+
+.nav {
+  display:flex;
+  list-style-type: none;
+  padding: 0;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.nav li {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-list a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
 }
+
+.gridContainer{
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(8, 1fr);
+background-color: white;
+margin-bottom: 20px;
+}
+
+
+
+.hero {
+grid-column: 1 / 13;
+grid-row: 1 / 8;
+background: #495E57;
+}
+
+.gridImage {
+  grid-column: 9 / 12;
+  grid-row: 2 / 9;
+  border-radius: 16px;
+}
+
+
+  .gridDesc {
+  grid-column: 2 / 6;
+  grid-row: 1 / 8;
+  white-space: normal;
+  background:  #495E57;
+}
+
+
+
+
+.title {
+font-family: 'Markazi Text';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 77px;
+color: #F4CE14;
+padding-bottom: 0em;
+margin-bottom: 0%;
+}
+
+.subHeading {
+/* Subheading */
+font-family: 'Markazi Text';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+color: #EDEFEE;
+padding-top: 0%;
+margin-top: 0%;
+margin-bottom: 0%;
+padding: 0rem;
+}
+
+.paraLight {
+font-family: 'Karla';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+margin-top: 2rem;
+margin-bottom: 0%;
+}
+
+.paraDark {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  padding-left: 2%;
+ 
+  }
+
+
+
+button {
+  border-radius: 16px;
+  background: #F4CE14;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 0%;
+  margin: 1rem;
+  padding: 1rem;
+  
+}
+
+.highlights {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 30px;
+}
+
+.highlights-items {
+  width: 300px;
+  height: 460px;
+  background: #EDEFEE;
+  border-radius: 16px 16px 0px 0px;
+  justify-content: space-between;
+  
+}
+
+.display-title {
+  font-family: 'Markazi Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  color: #000000;
+  float: inline-start;
+  }
+
+  .top-line {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 20px 20px;
+
+
+  }
+
+  .button-online-order {
+    border-radius: 16px;
+    background: #F4CE14;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    float: right;
+    
+
+  }
+
+  .testo-items {
+    display: flexbox;
+    width: 200px;
+    background: white;
+    border-radius: 16px 16px 0px 0px;
+    justify-content: space-between;
+    
+  }
+
+
+  .backImage {
+    grid-column: 9 / 12;
+    grid-row: 2 / 7;
+    border-radius: 16px;
+    width: 300px;
+    height: 250px
+  } 
+
+  .frontImage {
+    grid-column: 7 / 10;
+    grid-row: 4 / 8;
+    border-radius: 16px;
+    width: 300px;
+    height: 250px
+  } 
+  
+  .gridContainer1{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    background-color:#495E57;
+    margin-bottom: 20px;
+    
+    }
+
+    .gridDesc1 {
+      grid-column: 2 / 6;
+      grid-row: 1 / 8;
+      white-space: normal;
+      background: #495E57;
+    }
+
+    .footerContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      line-height: 40px;
+      padding-left: 50px;
+    }
+    .footerUl {
+      list-style: none;
+    }
