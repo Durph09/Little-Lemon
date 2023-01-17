@@ -1,25 +1,28 @@
 import React from 'react';
 import './App.css'
 import Nav from './components/Nav';
-import Hero from './components/Hero';
-import Highlights from './components/Highlights'
-import Testimonials from './components/Testimonials'
-import About from './components/About'
+import HomePage from './components/HomePage';
 import Footer from './components/Footer';
+import Booking from './components/Booking'
+import {Route, Routes} from 'react-router-dom'
+import About from './components/About';
 
 
 function App () {
   return (
     <>
-    <div className='app'>
-    {/*<img src={require('./components/images/greekSalad.jpg')}/>*/}
-  <Nav />
-  <Hero />
-  <Highlights />
-  <Testimonials />
-  <About />
+    <Nav />
+    <Routes> 
+    <Route path="/" element={<HomePage />}></Route>
+    <Route path="/booking" element={<Booking/>}></Route>
+    <Route path='/About' element={<About/>}></Route>
+    
+</Routes>
+    
+  
+  
   <Footer />
-  </div>
+  
     </>
   );
 }
