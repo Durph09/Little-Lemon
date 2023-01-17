@@ -1,10 +1,10 @@
-
+import BookingForm from './BookingForm';
 
 const Booking = () => {
 
     return (
        <>
-        Booking Page
+        <BookingForm />
        </> 
     )
 }
