@@ -13,6 +13,7 @@ const BookingForm = (props) => {
       <>
         <div className="singleContainer">
           <form className="form" onSubmit={handleSubmit}>
+            
             <div>
               <label htmlFor="res-date">Choose date</label>
               <input
@@ -24,6 +25,7 @@ const BookingForm = (props) => {
                 onChange={(e) => handleDateChange(e)}
               />
             </div>
+            
             <div>
               <label htmlFor="res-time">Choose time</label>
               <select

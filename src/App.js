@@ -9,7 +9,10 @@ import About from './components/About';
 import { useReducer } from 'react';
 
 
+
   function App () {
+
+    console.log(fetchAPI)
 
     const formReducer = (state, action) => {
       switch (action.type) {
@@ -29,14 +32,15 @@ import { useReducer } from 'react';
     };
   
     const fetchTimesAvailable = (date) => {
-      // logic to determine available times based on selected date
-      // for now, it returns the same available times regardless of the date
-      return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    };
+      return fetchAPI(date);
+    }
+
+    const today = new Date();
+    const isoDate = today.toISOString().slice(0,10);
   
     const initialFormState = {
-      date: "",
-      availableTimes: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+      date: isoDate,
+      availableTimes: fetchTimesAvailable,
       time: "",
       guest: "",
       occasion: "",
