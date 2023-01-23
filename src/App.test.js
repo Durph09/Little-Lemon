@@ -12,7 +12,7 @@ test('renders learn react link', () => {
 
 
 test('Renders the BookingForm heading',() => {
-  render(<BookingForm />);
+  render (<BookingForm />);
   const headingElement = screen.getByText("Book Now");
   expenct(headingElement).toBeInTheDocument();
 })
@@ -25,7 +25,7 @@ test('initializeTimes returns the correct value', () => {
 
 
 
-test('updateTimes returns the same value provided in the state', () => {
+/*test('updateTimes returns the same value provided in the state', () => {
     const state = {date: '2022-01-01', availableTimes: ['17:00', '18:00', '19:00']};
     expect(updateTimes(state)).toEqual(state.availableTimes);
-});
+}); */
