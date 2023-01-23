@@ -1,8 +1,33 @@
 
 
+.app {
+  display: flexbox;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1%;
+  width: 100%;
+}
 
+.form {
+  display: flexbox;
+  justify-content: center; 
+  justify-items: center; 
+  align-items: center;
+  align-content: center;
+  line-height: 300%;
+}
 
+.singleContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  background: #495E57
+}
 
+.inputFeilds {
+  margin-left: 10px;
+}
 
 
 
