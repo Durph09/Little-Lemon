@@ -1,14 +1,19 @@
 
 const BookingForm = (props) => {
-    const { formState, handleInputChange, handleDateChange } = props;
+    const { formState, handleInputChange, handleDateChange, submitForm } = props;
     const { availableTimes } = formState;
   
     const handleSubmit = (e) => {
       e.preventDefault();
       // handle form submission here
-      console.log({ formState });
+      submitForm(formState)
     };
-  
+    const placeHolderDate = formState.date ? new Date(formState.date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }) : '';
+  console.log(placeHolderDate)
     return (
       <>
         <div className="singleContainer">
@@ -18,11 +23,12 @@ const BookingForm = (props) => {
               <label htmlFor="res-date">Choose date</label>
               <input
                 className="inputFeilds"
+                placeholder={placeHolderDate}
                 type="date"
                 id="res-date"
                 name="date"
                 value={formState.date}
-                onChange={(e) => handleDateChange(e)}
+                onChange={(e) => {handleDateChange(e); handleInputChange(e)}}
               />
             </div>
             
@@ -52,9 +58,10 @@ const BookingForm = (props) => {
                 <select id="occasion" className="inputFeilds" name="occasion" value={formState.occasion} onChange={(e) => handleInputChange(e)}>
                     <option>Birthday</option>
                     <option>Anniversary</option>
+                    <option>Special Night Out</option>
                 </select>
             </div>
-            <button type="submit">Make Your reservation</button> 
+            <button type="submit" onSubmit={handleSubmit} >Make Your reservation</button> 
 </form>
 </div>
         </>
