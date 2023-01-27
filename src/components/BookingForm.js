@@ -13,7 +13,12 @@ const BookingForm = (props) => {
         month: "2-digit",
         day: "2-digit"
       }) : '';
-  console.log(placeHolderDate)
+
+      const minResDate = new Date();
+const isoMinResDate = minResDate.toISOString().slice(0, 10);
+
+
+  console.log(`place holder date ${placeHolderDate}`)
     return (
       <>
         <div className="singleContainer">
@@ -25,6 +30,7 @@ const BookingForm = (props) => {
                 className="inputFeilds"
                 placeholder={placeHolderDate}
                 type="date"
+                min={isoMinResDate}
                 id="res-date"
                 name="date"
                 value={formState.date}
@@ -59,6 +65,7 @@ const BookingForm = (props) => {
                     <option>Birthday</option>
                     <option>Anniversary</option>
                     <option>Special Night Out</option>
+                    
                 </select>
             </div>
             <button type="submit" onSubmit={handleSubmit} >Make Your reservation</button> 
